@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Server.Host.Win", "SVB.Ticker.Server.Host.Win\SVB.Ticker.Server.Host.Win.csproj", "{6BB59580-AF45-45DB-86BD-0D97676DF52D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{B263ED00-4DFC-423E-878A-E9FFF894F8C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Host", "Host", "{98096CAD-C48A-4CC9-84F2-27FF18FDC725}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F4AEB7F-AD79-4B04-BA33-96C20F5494D5}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		SolutionInfo.cs = SolutionInfo.cs
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Server.Core", "SVB.Ticker.Server.Core\SVB.Ticker.Server.Core.csproj", "{A4773BC4-8999-453F-9406-26BC5CD5D34E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Server.Rest", "SVB.Ticker.Server.Rest\SVB.Ticker.Server.Rest.csproj", "{10EE3504-58E1-4718-8A54-600068CADC65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Server.Common", "SVB.Ticker.Server.Common\SVB.Ticker.Server.Common.csproj", "{C2CAF528-CFBF-443B-8BAB-2C231AAA86D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Client", "SVB.Ticker.Client\SVB.Ticker.Client.csproj", "{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BB59580-AF45-45DB-86BD-0D97676DF52D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB59580-AF45-45DB-86BD-0D97676DF52D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB59580-AF45-45DB-86BD-0D97676DF52D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB59580-AF45-45DB-86BD-0D97676DF52D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4773BC4-8999-453F-9406-26BC5CD5D34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4773BC4-8999-453F-9406-26BC5CD5D34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4773BC4-8999-453F-9406-26BC5CD5D34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4773BC4-8999-453F-9406-26BC5CD5D34E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10EE3504-58E1-4718-8A54-600068CADC65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10EE3504-58E1-4718-8A54-600068CADC65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10EE3504-58E1-4718-8A54-600068CADC65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10EE3504-58E1-4718-8A54-600068CADC65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2CAF528-CFBF-443B-8BAB-2C231AAA86D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2CAF528-CFBF-443B-8BAB-2C231AAA86D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2CAF528-CFBF-443B-8BAB-2C231AAA86D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2CAF528-CFBF-443B-8BAB-2C231AAA86D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6BB59580-AF45-45DB-86BD-0D97676DF52D} = {98096CAD-C48A-4CC9-84F2-27FF18FDC725}
+		{8EFA5D6E-D0C2-4821-82A8-952DF7809C76} = {B263ED00-4DFC-423E-878A-E9FFF894F8C1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F20A1231-3768-40DF-8AA0-7118350E0BAC}
+	EndGlobalSection
+EndGlobal

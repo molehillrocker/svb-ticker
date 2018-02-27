@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SVB.Ticker.Server.Host.Win.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IsTraceMode" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AllowedHeaders" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AllowedMethods" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">GET</Value>
+    </Setting>
+    <Setting Name="AllowedOrigins" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">localhost,localhost:8085,localhost:8090,127.0.0.1,127.0.0.1:8085,127.0.0.1:8090</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
