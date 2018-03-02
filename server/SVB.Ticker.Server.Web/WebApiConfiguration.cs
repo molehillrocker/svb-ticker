@@ -6,18 +6,17 @@ using System.Web.Http.Tracing;
 using Common.Logging;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using SVB.Ticker.Server.Host.Win.Properties;
 using ITraceWriter = System.Web.Http.Tracing.ITraceWriter;
 
-namespace SVB.Ticker.Server.Host.Win
+namespace SVB.Ticker.Server.Web
 {
   public class WebApiConfiguration
   {
-    public static void Configure(HttpConfiguration config)
+    public static void Configure(HttpConfiguration config, bool isTraceMode, string allowedOrigins, string allowedHeaders, string allowedMethods)
     {
-      config.EnableCors(new CustomCorsPolicyProvider());
+      config.EnableCors(new CustomCorsPolicyProvider(allowedHeaders, allowedHeaders, allowedMethods));
 
-      if (Settings.Default.IsTraceMode)
+      if (isTraceMode)
       {
         config.EnableSystemDiagnosticsTracing();
         config.Services.Replace(typeof(ITraceWriter), new CommonLoggingTraceWriter());

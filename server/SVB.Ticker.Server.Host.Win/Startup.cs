@@ -4,13 +4,15 @@ using Autofac.Integration.WebApi;
 using Common.Logging;
 using Owin;
 using SVB.Ticker.Server.Core;
+using SVB.Ticker.Server.Host.Win.Properties;
 using SVB.Ticker.Server.Rest;
+using SVB.Ticker.Server.Web;
 
 namespace SVB.Ticker.Server.Host.Win
 {
   public class Startup
   {
-    private const string ApplicationName = "SVB Ticker";
+    private const string ApplicationName = "SVB-Ticker";
 
     private static readonly ILog Log = LogManager.GetLogger<Startup>();
 
@@ -32,7 +34,8 @@ namespace SVB.Ticker.Server.Host.Win
 
       Log.Info(x => x("Configuring WebAPI..."));
       HttpConfiguration config = new HttpConfiguration();
-      WebApiConfiguration.Configure(config);
+      WebApiConfiguration.Configure(config, Settings.Default.IsTraceMode, Settings.Default.AllowedOrigins, Settings.Default.AllowedHeaders,
+        Settings.Default.AllowedMethods);
       builder.RegisterHttpRequestMessage(config);
       Log.Info(x => x("Successfully configured WebAPI."));
 

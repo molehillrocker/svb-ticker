@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Server.Host.Win", "SVB.Ticker.Server.Host.Win\SVB.Ticker.Server.Host.Win.csproj", "{6BB59580-AF45-45DB-86BD-0D97676DF52D}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Server.Common", "SVB.Ticker.Server.Common\SVB.Ticker.Server.Common.csproj", "{C2CAF528-CFBF-443B-8BAB-2C231AAA86D3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Client", "SVB.Ticker.Client\SVB.Ticker.Client.csproj", "{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SVB.Ticker.Server.Web", "SVB.Ticker.Server.Web\SVB.Ticker.Server.Web.csproj", "{8E8DD05E-CC76-4B47-9277-3F3A728577CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +51,10 @@ Global
 		{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EFA5D6E-D0C2-4821-82A8-952DF7809C76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E8DD05E-CC76-4B47-9277-3F3A728577CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E8DD05E-CC76-4B47-9277-3F3A728577CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E8DD05E-CC76-4B47-9277-3F3A728577CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E8DD05E-CC76-4B47-9277-3F3A728577CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

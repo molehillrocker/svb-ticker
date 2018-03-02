@@ -8,13 +8,22 @@ using System.Web.Cors;
 using System.Web.Http.Cors;
 using Common.Logging;
 using SVB.Ticker.Server.Common.System.Extension;
-using SVB.Ticker.Server.Host.Win.Properties;
 
-namespace SVB.Ticker.Server.Host.Win
+namespace SVB.Ticker.Server.Web
 {
   public class CustomCorsPolicyProvider : ICorsPolicyProvider
   {
     private static readonly ILog Log = LogManager.GetLogger<CustomCorsPolicyProvider>();
+    private readonly string _allowedOrigins;
+    private readonly string _allowedHeaders;
+    private readonly string _allowedMethods;
+
+    public CustomCorsPolicyProvider(string allowedOrigins, string allowedHeaders, string allowedMethods)
+    {
+      _allowedOrigins = allowedOrigins;
+      _allowedHeaders = allowedHeaders;
+      _allowedMethods = allowedMethods;
+    }
 
     #region Implementation of ICorsPolicyProvider
 
@@ -61,14 +70,14 @@ namespace SVB.Ticker.Server.Host.Win
 
     #endregion
 
-    private static string[] CreateAllowedOrigins()
+    private  string[] CreateAllowedOrigins()
     {
-      if (string.IsNullOrEmpty(Settings.Default.AllowedOrigins))
+      if (string.IsNullOrEmpty(_allowedOrigins))
       {
         return new string[0];
       }
 
-      string[] origins = Settings.Default.AllowedOrigins.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+      string[] origins = _allowedOrigins.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
       string[] allowedOrigins = origins
         .Select(x => string.Format("http://{0}", x))
         .Concat(origins.Select(x => string.Format("https://{0}", x)))
@@ -79,28 +88,28 @@ namespace SVB.Ticker.Server.Host.Win
       return allowedOrigins;
     }
 
-    private static string[] CreateAllowedHeaders()
+    private  string[] CreateAllowedHeaders()
     {
-      if (string.IsNullOrEmpty(Settings.Default.AllowedHeaders))
+      if (string.IsNullOrEmpty(_allowedHeaders))
       {
         return new string[0];
       }
 
-      string[] allowedHeaders = Settings.Default.AllowedHeaders.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+      string[] allowedHeaders = _allowedHeaders.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
 
       Log.Trace(x => x("Allowed HTTP headers: ", string.Join(", ", allowedHeaders)));
 
       return allowedHeaders;
     }
 
-    private static string[] CreateAllowedMethods()
+    private string[] CreateAllowedMethods()
     {
-      if (string.IsNullOrEmpty(Settings.Default.AllowedMethods))
+      if (string.IsNullOrEmpty(_allowedMethods))
       {
         return new string[0];
       }
 
-      string[] allowedMethods = Settings.Default.AllowedMethods.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
+      string[] allowedMethods = _allowedMethods.Split(new[] { "," }, StringSplitOptions.RemoveEmptyEntries);
 
       Log.Trace(x => x("Allowed HTTP methods: ", string.Join(", ", allowedMethods)));
 
